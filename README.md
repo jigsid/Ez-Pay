@@ -1,5 +1,8 @@
 [website](https://ez-pay-user-app.vercel.app/)
 
+
+# project still in progess.
+
 # Payments App
 
 A third part payments app in which a user can send money to someone or on ramp/ off ramp from/to the bank.
