@@ -47,7 +47,7 @@ export async function createUser({ name, email, number, password }: User) {
         password: hashedPassword,
         Balance: {
           create: {
-            amount: 10000000,
+            amount: 1000000,
             locked: 0,
           },
         },
