@@ -3,6 +3,7 @@
 import prisma from "@repo/db/client";
 import userSchema, { User } from "../zodSchema/userSchema";
 import bcrypt from "bcrypt";
+import { balanceAtom } from "./../../../../../packages/store/src/atoms/balance";
 
 export async function createUser({ name, email, number, password }: User) {
   const validatedData = userSchema.safeParse({ name, email, number, password });
@@ -44,6 +45,12 @@ export async function createUser({ name, email, number, password }: User) {
         email,
         number,
         password: hashedPassword,
+        Balance: {
+          create: {
+            amount: 10000000,
+            locked: 0,
+          },
+        },
       },
     });
 
