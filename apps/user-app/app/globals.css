@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .header {
+    @apply w-full p-5 flex justify-between items-center bg-secondary-bg-color text-primary-color;
+  }
+
+  .logo {
+    @apply text-xl font-bold;
+  }
+
+  .nav {
+    @apply flex gap-4;
+  }
+
+  .nav-button {
+    @apply px-4 py-2 text-base text-primary-color bg-gray-800 border border-primary-color cursor-pointer transition;
+  }
+
+  .main {
+    @apply text-center px-5 py-20;
+  }
+
+  .main-heading {
+    @apply text-4xl text-primary-color font-bold;
+  }
+
+  .subheading {
+    @apply text-lg text-text-color-secondary mt-2 mx-auto max-w-lg;
+  }
+
+  .action-buttons {
+    @apply mt-6 flex gap-5 justify-center;
+  }
+
+  .cta-button {
+    @apply px-8 py-3 text-lg bg-primary-color text-text-color-primary font-semibold cursor-pointer transition;
+  }
+
+  .secondary-button {
+    @apply px-8 py-3 text-lg text-primary-color bg-secondary-bg-color border border-primary-color cursor-pointer transition;
+  }
+
+  .features {
+    @apply mt-10 flex justify-around max-w-3xl w-full mx-auto;
+  }
+
+  .feature-box {
+    @apply bg-gray-800 p-6 rounded text-center text-text-color-primary w-1/3;
+  }
+
+  .feature-title {
+    @apply text-xl text-primary-color font-semibold;
+  }
+
+  .feature-description {
+    @apply text-sm text-text-color-secondary mt-2;
+  }
+
+  .footer {
+    @apply w-full p-5 text-center bg-secondary-bg-color text-text-color-secondary mt-auto;
+  }
+
+  .footer-text {
+    @apply text-xs text-gray-500;
+  }
+}
