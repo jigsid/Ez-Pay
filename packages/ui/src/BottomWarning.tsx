@@ -4,6 +4,7 @@ interface BottomWarningProps {
   label: string;
   buttonText: string;
   to: string;
+  className?: string;
 }
 
 export const BottomWarning = ({

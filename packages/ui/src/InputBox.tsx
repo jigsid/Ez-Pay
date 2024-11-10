@@ -8,6 +8,7 @@ export const InputBox = ({
   placeholder: string;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
   inputType?: string;
+  className?: string;
 }) => {
   return (
     <>

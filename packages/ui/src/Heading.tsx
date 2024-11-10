@@ -1,5 +1,6 @@
 interface HeadingProps {
   label: string;
+  className?: string;
 }
 
 export const Heading = ({ label }: HeadingProps) => {
