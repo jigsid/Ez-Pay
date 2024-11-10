@@ -42,7 +42,7 @@ const HomePage = () => {
             onClick={handleSignIn}
             className="px-8 py-3 bg-gray-700 text-gray-100 font-semibold rounded-lg shadow-lg hover:bg-gray-600 hover:scale-110 hover:shadow-2xl transform transition-all duration-300"
           >
-            Sign In
+            login
           </button>
         </div>
 
