@@ -1,5 +1,6 @@
 interface SubHeadingProps {
   label: string;
+  className?: string;
 }
 
 export const SubHeading = ({ label }: SubHeadingProps) => {
