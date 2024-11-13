@@ -38,7 +38,7 @@ export const OnRampTransactions = ({
               </span>
             </div>
             <div className="text-2xl font-bold text-blue-600">
-              + £{(t.amount / 100).toFixed(2)}
+              + ${(t.amount / 100).toFixed(2)}
             </div>
             <div className="flex flex-col items-end">
               <span

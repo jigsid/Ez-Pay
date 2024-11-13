@@ -64,7 +64,7 @@ export const P2pTransactions = async ({
                     t.type === "sent" ? "text-red-600" : "text-blue-600"
                   }`}
                 >
-                  {t.type === "sent" ? "-" : "+"} £{(t.amount / 100).toFixed(2)}
+                  {t.type === "sent" ? "-" : "+"} ${(t.amount / 100).toFixed(2)}
                 </div>
                 <div className="flex flex-col items-end">
                   <span className="text-gray-700 text-sm font-medium">
@@ -74,7 +74,7 @@ export const P2pTransactions = async ({
                 </div>
               </div>
             );
-          }),
+          })
         )}
       </div>
     </Card>
