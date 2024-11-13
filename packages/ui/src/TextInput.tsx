@@ -8,6 +8,7 @@ export const TextInput = ({
   placeholder: string;
   onChange: (value: string) => void;
   label: string;
+  className?: string;
 }) => {
   return (
     <div className="pt-2">

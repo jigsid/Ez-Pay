@@ -6,6 +6,7 @@ export function Card({
 }: {
   title: string;
   children?: React.ReactNode;
+  className?: string;
 }): JSX.Element {
   return (
     <div className="shadow-lg p-6 bg-white rounded-xl bg-gradient-to-b from-gray-50 to-gray-100">
