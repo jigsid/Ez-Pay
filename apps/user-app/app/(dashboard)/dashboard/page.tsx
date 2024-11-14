@@ -54,8 +54,8 @@ async function getUserData() {
       type: "received" as const,
     })),
   ]
-    .sort((a, b) => b.time.getTime() - a.time.getTime()) // Sort by most recent first
-    .slice(0, 5); // Only get the top 5 recent transactions
+    .sort((a, b) => b.time.getTime() - a.time.getTime())
+    .slice(0, 5);
 
   const onRampTransactions = user.OnRampTransaction.map((t) => ({
     time: t.startTime,
@@ -79,15 +79,16 @@ async function getUserData() {
   };
 }
 
-export default async function () {
+export default async function UserDashboard() {
   const userData = await getUserData();
 
   return (
-    <div className="w-screen">
-      <div className="text-4xl text-[#6a51a6] pt-8 mb-8 font-bold">
-        Hi {userData.name}
+    <div className="w-full max-w-7xl mx-auto p-6 bg-white shadow-md rounded-lg">
+      <div className="text-4xl text-[#6a51a6] mb-6 font-bold text-center">
+        Welcome, {userData.name}
       </div>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 p-4">
+
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <BalanceCard
           amount={userData.balance.amount}
           locked={userData.balance.locked}
@@ -97,11 +98,14 @@ export default async function () {
           totalOut={userData.totalMoneyOut}
         />
       </div>
-      <div className="pt-4 flex gap-4">
-        <div className="flex-1">
+
+      <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="flex flex-col">
+          <h2 className="text-xl font-semibold mb-2">Recent Transactions</h2>
           <P2pTransactions transactions={userData.transactions} />
         </div>
-        <div className="flex-1 mr-3">
+        <div className="flex flex-col">
+          <h2 className="text-xl font-semibold mb-2">On-Ramp Transactions</h2>
           <OnRampTransactions transactions={userData.onRampTransactions} />
         </div>
       </div>
