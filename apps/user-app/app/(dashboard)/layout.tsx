@@ -12,7 +12,7 @@ export default function Layout({
       <AppbarClient />
       <main className="flex-grow">
         <div className="flex">
-          <div className="w-72 border-r border-slate-300 min-h-screen mr-4 pt-28">
+          <div className="w-72 border-r border-slate-300 min-h-screen mr-4 pt-28 sidebar">
             <div>
               <SidebarItem
                 href={"/dashboard"}
