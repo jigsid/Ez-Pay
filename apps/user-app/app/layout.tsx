@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Ez Pay",
   description: "Simple wallet app",
   icons: {
-    icon: "/gg.svg",
+    icon: "/jigsaw.svg",
   },
 };
 
